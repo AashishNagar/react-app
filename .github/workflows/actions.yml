@@ -1,11 +1,20 @@
 name: Actions workflows
 on:
-  push:
-  pull_request:
-    types: [closed ,assigned, opened, reopened]
-  schedule:
-    - cron: "0/5 * * * *"
-    
+   push:
+     branches:
+       - master
+       - 'feature/*' # any branch that start with feature/. Matches feature/login, feature/list_dispaly but it does not mach feature/feat/b
+       - 'feature/**' # does match feature/feat/b
+       - '!feature/featc' #Github will not run github actions even though it has matched. Because of !
+     tags:
+      - v1.*
+
+  # push:
+  # pull_request:
+  #   types: [closed ,assigned, opened, reopened]
+  # schedule:
+  #   - cron: "0/5 * * * *"
+  
 jobs:
   run-github-Actions:
     runs-on: ubuntu-latest
