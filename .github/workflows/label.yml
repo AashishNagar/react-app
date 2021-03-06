@@ -9,5 +9,7 @@ jobs:
         run: echo "${{toJSON(github)}}"
       - name: just to change something
         run: echo "Chek this"
+      - name: again just to change something
+        run: echo "Chek this"
 
 
