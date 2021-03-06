@@ -6,7 +6,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: print the labels #to print all labels
-        run: echo "${{toJSON(github.pull_request.labels)}}"
+        run: echo "${{toJSON(github.pull_request)}}"
       - name: just to change something
         run: echo "Chek this"
       - name: again just to change something
