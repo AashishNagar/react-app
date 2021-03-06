@@ -7,4 +7,7 @@ jobs:
     steps:
       - name: print the labels #to print all labels
         run: echo "${{toJSON(github)}}"
+      - name: just to change something
+        run: echo "Chek this"
+
 
