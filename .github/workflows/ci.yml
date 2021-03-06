@@ -7,9 +7,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: checkout codes
-        uses: action/checkout@v2
+        uses: actions/checkout@v2
       - name: Use node ja
-        uses: action/setup-node@v1
+        uses: actions/setup-node@v1
         with:
           node-verion: "12.x"
       - run: npm ci
