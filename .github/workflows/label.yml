@@ -1,10 +1,10 @@
 name: Run only for Testable
-on: push
+on: pull_request
 
 jobs:
   lables:
     runs-on: ubuntu-latest
     steps:
-      - name: print the labels
+      - name: print the labels #to print all labels
         run: echo "${{toJSON(github)}}"
 
