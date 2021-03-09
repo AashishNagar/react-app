@@ -13,10 +13,7 @@ jobs:
         run: echo "${{toJSON(github.event.pull_request.labels.*.name)}}"
       - name: just to change something
         run: echo "Chek this"
-      - name: again just to change something
-        run: echo "Chek this"
-      - name: now again just to change something
-        run: echo "Chek this"
+  
 
 
 
