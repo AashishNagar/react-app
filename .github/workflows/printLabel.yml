@@ -6,7 +6,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: print the labels #to print all labels
-        run: echo "${{contains(${{github.event.issue.labels.*.name}}, 'enhancement')}}"
+        run: echo "${{contains(toJSON(github.event.pull_request.labels.*.name), 'enhancement')}}"
       - name: print labels json
         run: echo "${{toJSON(github.event.pull_request.labels.*.name)}}"
       - name: just to change something
