@@ -1,0 +1,21 @@
+name: Print Label name
+on: pull_request
+
+jobs:
+  lables:
+    runs-on: ubuntu-latest
+    steps:
+      - name: print the labels #to print all labels
+        run: echo "${{github.event.issue.labels.*.name}}"Chek this"
+      - name: print labels json
+        run: echo "${{toJSON(github.event.pull_request.labels)}}"
+      - name: just to change something
+        run: echo "Chek this"
+      - name: again just to change something
+        run: echo "Chek this"
+      - name: now again just to change something
+        run: echo "Chek this"
+
+
+
+
