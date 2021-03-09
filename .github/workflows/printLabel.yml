@@ -5,6 +5,8 @@ jobs:
   lables:
     runs-on: ubuntu-latest
     steps:
+      - name: Check if pr is of label type the labels #to print all labels
+        run: echo "${{contains(toJSON(github.event.pull_request.labels.*.name), 'WIP')}}"
       - name: print the labels #to print all labels
         run: echo "${{contains(toJSON(github.event.pull_request.labels.*.name), 'WIP')}}"
       - name: print labels json
